@@ -1,0 +1,63 @@
+======================================================================
+COVERT DATA TRANSMISSION -- METRICS SUMMARY REPORT
+======================================================================
+Generated: 2026-05-30 00:07:55
+
+----------------------------------------------------------------------
+PERFORMANCE SUMMARY
+----------------------------------------------------------------------
+         ARP avg time: 282.7336 sec
+        MTNS avg time: 274.5263 sec
+    combined avg time: 282.7336 sec
+
+         ARP avg throughput: 4.74 bps
+        MTNS avg throughput: 0.29 bps
+    combined avg throughput: 5.02 bps
+
+  MTNS avg overhead ratio: 2.34x
+
+  msg_len=  1: 1/1 (100% success)
+  msg_len=  5: 5/5 (100% success)
+  msg_len= 11: 5/5 (100% success)
+  msg_len= 15: 6/6 (100% success)
+
+----------------------------------------------------------------------
+INTEGRITY SUMMARY
+----------------------------------------------------------------------
+  Corruption detection rate: 100.00% avg
+  All corruption tests: PASS
+  Threshold reconstruction: ALL PASS
+  Sub-threshold rejection: ALL PASS
+
+----------------------------------------------------------------------
+STATISTICAL DETECTABILITY SUMMARY
+----------------------------------------------------------------------
+  Test                           Channel   Statistic    p-value Verdict
+  ------------------------------------------------------------------
+  chi_square_bytes               ARP      23321.2817     0.0000 FAIL  
+  ks_uniform_bytes               ARP          0.2671     0.0000 FAIL  
+  shannon_entropy                ARP          6.3252        N/A FAIL  
+  serial_correlation             ARP          0.2873     0.0000 FAIL  
+  runs_test                      ARP        -11.5657     0.0000 FAIL  
+  arp_inter_request_ks_expon     ARP          0.4805     0.0000 FAIL  
+  arp_gap_mean                   ARP          9.6164        N/A nan   
+  arp_gap_variance               ARP        181.4655        N/A nan   
+  chi_square_bytes               MTNS       230.6927     0.8606 PASS  
+  ks_uniform_bytes               MTNS         0.0039     0.0000 FAIL  
+  shannon_entropy                MTNS         8.0000        N/A PASS  
+  serial_correlation             MTNS         0.0002     0.6143 PASS  
+  runs_test                      MTNS        -0.6447     0.5191 PASS  
+  tcp_inter_packet_ks_expon      MTNS         0.4598     0.0000 FAIL  
+  tcp_gap_mean                   MTNS         0.0214        N/A nan   
+  tcp_gap_variance               MTNS         0.0209        N/A nan   
+  marked_unmarked_ratio          MTNS         0.0629        N/A nan   
+
+======================================================================
+FILES IN RESULTS DIRECTORY:
+  integrity_results.csv
+  perf_channel_timing.csv
+  perf_overhead.csv
+  perf_success_rate.csv
+  perf_throughput.csv
+  statistical_results.csv
+======================================================================
